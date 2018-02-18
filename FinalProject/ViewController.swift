@@ -31,8 +31,8 @@ class ViewController: UIViewController, UITabBarDelegate, UITableViewDelegate, U
         
         
         
-        ApiHandler.shared.getMoviesGeners()
-        ApiHandler.shared.getTvShowsGeneres()
+        ApiHandler.shared.getMoviesGeners() // Load movies geners from IMDB cloud
+        ApiHandler.shared.getTvShowsGeneres() // Load TV shows geners from IMDB cloud
         ApiHandler.shared.getNowPlayingMovies{
             DispatchQueue.main.async {
                 self.getNowPlayingMoviesBool = true; self.firstTableViewOutlet.reloadData()
